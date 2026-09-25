@@ -1,0 +1,208 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Coming Soon | Under Construction</title>
+
+    <meta name="description" content="Our website is currently under construction. We will be launching soon!">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #0f172a, #1e3a8a, #2563eb);
+            color: #ffffff;
+            overflow: hidden;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 700px;
+            text-align: center;
+            padding: 50px 35px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 24px;
+            backdrop-filter: blur(15px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1.2s ease;
+        }
+
+        .icon {
+            font-size: 75px;
+            margin-bottom: 25px;
+            display: inline-block;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        h1 {
+            font-size: clamp(32px, 6vw, 54px);
+            font-weight: 800;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+
+        h1 span {
+            color: #93c5fd;
+        }
+
+        p {
+            font-size: 17px;
+            line-height: 1.8;
+            color: #dbeafe;
+            margin-bottom: 30px;
+        }
+
+        .progress-box {
+            margin: 30px 0;
+        }
+
+        .progress-text {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            margin-bottom: 12px;
+            color: #bfdbfe;
+        }
+
+        .progress-bar {
+            height: 10px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .progress {
+            width: 75%;
+            height: 100%;
+            background: linear-gradient(90deg, #60a5fa, #a5f3fc);
+            border-radius: 20px;
+            animation: loading 2s ease-in-out;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 15px 35px;
+            background: #ffffff;
+            color: #1e40af;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background: #93c5fd;
+            color: #0f172a;
+            transform: translateY(-3px);
+        }
+
+        .footer {
+            margin-top: 35px;
+            font-size: 13px;
+            color: #bfdbfe;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        @keyframes loading {
+            from {
+                width: 0;
+            }
+            to {
+                width: 75%;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 40px 22px;
+            }
+
+            .icon {
+                font-size: 60px;
+            }
+
+            p {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="icon">🚧</div>
+
+        <h1>We're <span>Coming Soon!</span></h1>
+
+        <p>
+            Something amazing is in the works! We're working hard
+            to bring you a brand-new experience.
+            Our website is currently under construction.
+            Stay tuned for our official launch!
+        </p>
+
+        <div class="progress-box">
+            <div class="progress-text">
+                <span>Development Progress</span>
+                <span>75%</span>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+        </div>
+
+        <a href="mailto:info@example.com" class="button">
+            Contact Us
+        </a>
+
+        <div class="footer">
+            &copy; <span id="year"></span> Your Website Name.
+            All Rights Reserved.
+        </div>
+
+    </div>
+
+    <script>
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+    </script>
+
+</body>
+</html>
