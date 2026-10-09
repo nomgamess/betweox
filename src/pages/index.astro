@@ -16,7 +16,7 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 import SocialProof from '~/components/widgets/SocialProof.astro';
 import StructuredData from '~/components/common/StructuredData.astro';
 import { SITE, METADATA, I18N } from 'astrowind:config';
-import favIconSvg from '~/assets/favicons/favicon.svg';
+import brandLogo from '~/assets/images/betweox-logo.png';
 
 const metadata = {
   title: 'Custom Software & Web Development Agency | BetWeox (PVT) LTD',
@@ -46,7 +46,7 @@ const structuredData = [
     '@id': organizationId,
     name: SITE?.name,
     url: SITE?.site,
-    logo: new URL(favIconSvg.src, SITE?.site).toString(),
+    logo: new URL(brandLogo.src, SITE?.site).toString(),
     ...(METADATA?.twitter?.handle ? { sameAs: [`https://x.com/${METADATA.twitter.handle.replace(/^@/, '')}`] } : {}),
   },
 ];
